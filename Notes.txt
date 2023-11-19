@@ -58,3 +58,9 @@ Test login credentials
 
 "email": "luffy14@onepiece.com",
 "password": "luffy14"
+
+To Do:
+1.) Login page - Display incorrect login credentials to user
+2.) Register page - Display email or password already exist to user
+3.) Admin page - CRUD operations
+4.) Mobile responsiveness
