@@ -1,0 +1,109 @@
+@import "../../App.scss";
+
+.register {
+  
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQfOdj3Usdwgdb5F1AF12xnQzjrVYYOQM_FyaKKYcFAcBD0_ACEBefkuBo3pV5QoV0-PQoVLpmDkHZ0PJsTM7h7BwcONJT2C8sy8W4UOru4WM-wIeU4Pj4D63caokBfp1zwnWg1vXYM5zU35_O65S_-cuEeA.jpg?r=ed9");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  // url("https://media.wired.com/photos/59de99f39db9cf4266631b87/master/w_960,c_limit/Movies-TopArt.jpg")
+
+  .top {
+    .wrapper {
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        height: 40px;
+      }
+
+      .loginbutton {
+        background-color: red;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 15px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+        margin: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .input {
+        width: 40%;
+        background-color: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 20px;
+        border-radius: 5px;
+
+        input {
+            width: 60%;
+            height: 50px;
+            border: none;
+            padding: 0 10px;
+            margin: 5% 0;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .registerbutton {
+          width: 30%;
+          height: 50px;
+          background-color: red;
+          border: none;
+          color: white;
+          font-size: 20px;
+          margin: 5%;
+          cursor: pointer;
+          border-radius: 5px;
+      }
+    }
+
+    .button {
+      width: 100px;
+      height: 35px;
+      background-color: red;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin: 5%;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+  }
+}
