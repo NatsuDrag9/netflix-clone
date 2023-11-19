@@ -40,7 +40,7 @@ app.use("/api/movies", movieRoute);
 // CRUD operation requests made to "/api/lists" end point
 app.use("/api/lists", listRoute);
 
-app.listen(8800, () => {
-  // Listens on the port 8800 on localhost
-  console.log("Backend server is running");
-});
+// app.listen(8800, () => {
+//   // Listens on the port 8800 on localhost
+//   console.log("Backend server is running");
+// });
