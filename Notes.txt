@@ -1,0 +1,21 @@
+Installed:
+1.) Material UI for icons
+2.) Backend server - express server
+3.) Connect with MongoDB - mongoose
+4.) Run application automatically on every change - nodemon
+5.) To hide MongoDB url and any secret keys - dotenv
+6.) For security - jsonwebtoken
+7.) Hashing algorithms for passwords - cryptojs
+
+Backend server:
+Listens on port 8800
+
+Test login credentials
+
+1.) Admin
+"email": "natsudragneel@fairytail.com",
+"password": "natsu123"
+
+2.) Random user
+"email": "luffy11@onepiece.com",
+"password": "luffy11"
