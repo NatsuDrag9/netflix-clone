@@ -16,6 +16,45 @@ Test login credentials
 "email": "natsudragneel@fairytail.com",
 "password": "natsu123"
 
-2.) Random user
+2.) Random users
+"email": "luffy1@onepiece.com",
+"password": "luffy123"
+
+"email": "luffy1@onepiece.com",
+"password": "luffy1223"
+
+"email": "luffy3@onepiece.com",
+"password": "luffy1233"
+
+"email": "luffy4@onepiece.com",
+"password": "luffy1234"
+
+"email": "luffy5@onepiece.com",
+"password": "luffy12345"
+
+"email": "luffy6@onepiece.com",
+"password": "luffy123456"
+
+"email": "luffy7@onepiece.com",
+"password": "luffy1234567"
+
+"email": "luffy8@onepiece.com",
+"password": "luffy12345678"
+
+"email": "luffy9@onepiece.com",
+"password": "luffy123456789"
+
+"email": "luffy10@onepiece.com",
+"password": "luffy12345678910"
+
 "email": "luffy11@onepiece.com",
 "password": "luffy11"
+
+"email": "luffy12@onepiece.com",
+"password": "luffy12"
+
+"email": "luffy13@onepiece.com",
+"password": "luffy13"
+
+"email": "luffy14@onepiece.com",
+"password": "luffy14"
