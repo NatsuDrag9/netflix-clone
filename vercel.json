@@ -8,11 +8,12 @@
     {
       "src": "client/package.json",
       "use": "@vercel/static-build",
-      "config": { "outputDirectory": "client/public" }
+      "outputDirectory": "client/build"
     }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server/index.js" },
     { "src": "/(.*)", "dest": "client/build/$1" }
-  ]
+  ],
+  "framework": "reactjs"
 }
