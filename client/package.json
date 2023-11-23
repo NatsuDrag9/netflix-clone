@@ -18,12 +18,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "mkdir -p build && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "build": {
-    "outputDirectory": "build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +43,6 @@
   "devDependencies": {
     "axios": "^1.6.1",
     "react-router-dom": "^6.18.0"
-  }
+  },
+  "proxy": "http://localhost:8800/api/"
 }
