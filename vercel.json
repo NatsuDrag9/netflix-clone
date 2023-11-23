@@ -17,5 +17,5 @@
     { "src": "/api/(.*)", "dest": "server/index.js" },
     { "src": "/(.*)", "dest": "client/build/$1" }
   ],
-  "framework": "reactjs"
+  "framework": "react"
 }
