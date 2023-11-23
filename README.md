@@ -1,12 +1,13 @@
 # netflix-clone
 
 This is a clone of Netflix app.
+
 ---
 
 ## Tech stack
 * **Frontend** - React JS
 * **Backend** - Express server
-* **API calls and authentication** - Context API
+* **API calls and State Management** - Context API + ```useReducer```
 * **Database** - MongoDB
 
 ## Libraries used
