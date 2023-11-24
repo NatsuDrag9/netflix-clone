@@ -25,6 +25,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://natsudrag9.github.io/netflix-clone/",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -46,6 +47,5 @@
   "devDependencies": {
     "axios": "^1.6.1",
     "react-router-dom": "^6.18.0"
-  },
-  "homepage": "https://natsudrag9.github.io/netflix-clone/"
+  }
 }

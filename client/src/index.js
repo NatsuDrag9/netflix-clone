@@ -10,7 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <BrowserRouter>
+      {/* After setting homepage attribute in package.json to github pages, set the basename to corresponding github repo */}
+      <BrowserRouter basename='/netflix-clone'>
         <App />
       </BrowserRouter>
     </AuthContextProvider>
