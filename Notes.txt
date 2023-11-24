@@ -9,6 +9,9 @@ Installed:
 6.) For security - jsonwebtoken
 7.) Hashing algorithms for passwords - cryptojs
 
+Deploying to gh-pages:
+After setting homepage attribute in package.json to github pages, set the basename attribute in <BrowserRouter> to corresponding github repo in client/src/index.js
+
 Backend server:
 Listens on port 8800
 
