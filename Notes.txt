@@ -1,3 +1,5 @@
+,
+  "proxy": "http://localhost:8800/api/"
 Installed:
 1.) Material UI for icons
 2.) Backend server - express server
