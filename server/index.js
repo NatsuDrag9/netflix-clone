@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = require('cors');
+const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
@@ -30,13 +30,22 @@ app.use(express.json());
 
 // Define CORS options
 const corsOptions = {
-  origin: 'https://natsudrag9.github.io/netflix-clone/',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  origin: "https://natsudrag9.github.io/netflix-clone/",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
 
 // Enabling CORS for all routes
 app.use(cors(corsOptions));
+
+// Content security policy
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self' https://natsudrag9.github.io/netflix-clone/"
+  );
+  next();
+});
 
 /* API calls */
 // Post request made to the "/app/auth" end point
