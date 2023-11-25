@@ -49,11 +49,10 @@ app.use(cors(corsOptions));
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self' https://natsudrag9.github.io/ https://netflix-clone-server-iota.vercel.app; icon-src 'self' https://netflix-clone-server-iota.vercel.app; script-src 'unsafe-inline'"
+    "default-src 'self' https://natsudrag9.github.io/ https://netflix-clone-server-iota.vercel.app; img-src 'self' data: https://netflix-clone-server-iota.vercel.app; script-src 'self' 'unsafe-inline'"
   );
   next();
 });
-
 
 /* API calls */
 // Post request made to the "/app/auth" end point
