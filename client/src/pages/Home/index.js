@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "../../components/Navbar";
 import Featured from "../../components/Featured";
 import List from "../../components/List";
+import { apiUrl } from "../../context/authContext/apiCalls";
 
 function Home({ type }) {
   const [lists, setLists] = useState([]);
@@ -13,12 +14,20 @@ function Home({ type }) {
     const get_random_lists = async () => {
       try {
         const response = await axios.get(
-          `lists${type ? "?type=" + type : ""}&${
+          // Localhost
+          // `lists${type ? "?type=" + type : ""}&${
+          //   genre ? "genre=" + genre : ""
+          // }`
+
+          // Vercel
+          `${apiUrl}/lists${type ? "?type=" + type : ""}&${
             genre ? "genre=" + genre : ""
           }`,
           {
             headers: {
-              token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+              token:
+                "Bearer " +
+                JSON.parse(localStorage.getItem("user")).accessToken,
             },
           }
         );

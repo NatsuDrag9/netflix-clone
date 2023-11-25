@@ -4,6 +4,7 @@ import "./style.scss";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { AuthContext } from "../../context/authContext/AuthContext";
+import { apiUrl } from "../../context/authContext/apiCalls";
 
 function Featured({ type, setGenre }) {
   const [content, setContent] = useState({});
@@ -13,7 +14,15 @@ function Featured({ type, setGenre }) {
   useEffect(() => {
     const get_random_content = async () => {
       try {
-        const response = await axios.get(`/movies/random?type=${type}`, {
+        // Localhost
+        // const response = await axios.get(`/movies/random?type=${type}`, {
+        //   headers: {
+        //     token: "Bearer" + JSON.parse(localStorage.getItem("user")).accessToken,
+        //   },
+        // });
+
+        // Vercel
+        const response = await axios.get(`${apiUrl}/movies/random?type=${type}`, {
           headers: {
             token: "Bearer" + JSON.parse(localStorage.getItem("user")).accessToken,
           },

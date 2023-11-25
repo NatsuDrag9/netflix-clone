@@ -6,6 +6,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import AddIcon from "@mui/icons-material/Add";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
+import { apiUrl } from "../../context/authContext/apiCalls";
 
 function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,10 +15,19 @@ function ListItem({ index, item }) {
   useEffect(() => {
     const getMovie = async () => {
       try {
-        const response = await axios.get("/movies/find/" + item, {
+        // Localhost
+        // const response = await axios.get("/movies/find/" + item, {
+        //   headers: {
+        //     token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
+        //       // "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTI0MDRlMjc2ZmEzMDQyYTEzOWY2ZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5OTk5MzM3NiwiZXhwIjoxNzAwNDI1Mzc2fQ.XDEwBBOU7xo4vbKoPdmMSIZKTwi5v81vxuIy03R5Gx8",
+        //   },
+        // });
+
+        // Vercel
+        const response = await axios.get(`${apiUrl}/movies/find/` + item, {
           headers: {
-            token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
-              // "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTI0MDRlMjc2ZmEzMDQyYTEzOWY2ZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5OTk5MzM3NiwiZXhwIjoxNzAwNDI1Mzc2fQ.XDEwBBOU7xo4vbKoPdmMSIZKTwi5v81vxuIy03R5Gx8",
+            token:
+              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
         });
 
@@ -30,8 +40,7 @@ function ListItem({ index, item }) {
   }, [item]);
 
   return (
-    
-    <Link to={{ pathname: "/watch", state:{movie: movie} }}>
+    <Link to={{ pathname: "/watch", state: { movie: movie } }}>
       <div
         className="listitem"
         onMouseEnter={() => setIsHovered(true)}
