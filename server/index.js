@@ -42,7 +42,7 @@ app.use(cors(corsOptions));
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src *"
+    "default-src 'self' https://natsudrag9.github.io/ https://netflix-clone-server-iota.vercel.app/"
   );
   next();
 });
