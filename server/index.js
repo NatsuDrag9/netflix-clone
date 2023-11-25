@@ -39,13 +39,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Content security policy
-// app.use((req, res, next) => {
-//   res.setHeader(
-//     "Content-Security-Policy",
-//     "default-src 'self' https://natsudrag9.github.io/netflix-clone/"
-//   );
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self' https://natsudrag9.github.io/netflix-clone/"
+  );
+  next();
+});
 
 /* API calls */
 // Post request made to the "/app/auth" end point
