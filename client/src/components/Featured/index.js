@@ -24,7 +24,7 @@ function Featured({ type, setGenre }) {
         // Vercel
         const response = await axios.get(`${apiUrl}/movies/random?type=${type}`, {
           headers: {
-            token: "Bearer" + JSON.parse(localStorage.getItem("user")).accessToken,
+            token: "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
         });
         setContent(response.data[0]);
