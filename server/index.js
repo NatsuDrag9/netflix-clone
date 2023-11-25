@@ -63,15 +63,15 @@ app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
 // Listening port on localhost
-app.listen(8800, () => {
-  // Listens on the port 8800 on localhost
-  console.log("Backend server is running");
-});
+// app.listen(8800, () => {
+//   // Listens on the port 8800 on localhost
+//   console.log("Backend server is running");
+// });
 
 // Vercel dynamically assigns a port and sets the PORT environment variable
-// const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 // const PORT = process.env.PORT || 8800;
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
