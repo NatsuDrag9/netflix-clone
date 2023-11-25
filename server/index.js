@@ -30,7 +30,7 @@ app.use(express.json());
 
 // Define CORS options
 const corsOptions = {
-  origin: "https://natsudrag9.github.io/netflix-clone/",
+  origin: "https://natsudrag9.github.io",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
