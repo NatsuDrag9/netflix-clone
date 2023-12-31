@@ -28,11 +28,29 @@ router.post("/register", async (req, res) => {
 });
 
 // Validiates password
+// function validate_password(encryptedPassword, enteredPassword) {
+//   const bytes = CryptoJS.AES.decrypt(encryptedPassword, process.env.SECRET_KEY);
+//   const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
+//   return originalPassword !== enteredPassword;
+// }
 function validate_password(encryptedPassword, enteredPassword) {
-  const bytes = CryptoJS.AES.decrypt(encryptedPassword, process.env.SECRET_KEY);
-  const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
-  return originalPassword !== enteredPassword;
+  try {
+    console.log('Encrypted Password:', encryptedPassword);
+    console.log('Secret Key:', process.env.SECRET_KEY);
+
+    if (!encryptedPassword || !process.env.SECRET_KEY) {
+      throw new Error('Decryption parameters are missing');
+    }
+
+    const bytes = CryptoJS.AES.decrypt(encryptedPassword, process.env.SECRET_KEY);
+    const originalPassword = bytes.toString(CryptoJS.enc.Utf8);
+    return originalPassword !== enteredPassword;
+  } catch (error) {
+    console.error('Error during decryption:', error);
+    return true; // or handle the error as needed
+  }
 }
+
 
 // Endpoint - User login using post method
 router.post("/login", async (req, res) => {
