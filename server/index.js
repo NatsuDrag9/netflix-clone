@@ -57,7 +57,7 @@ app.use(cors(corsOptions));
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self' https://natsudrag9.github.io/netflix-clone/favicon.ico https://netflix-clone-server-iota.vercel.app; img-src 'self' data: https://netflix-clone-server-iota.vercel.app https://natsudrag9.github.io/netflix-clone/favicon.ico; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
+    "default-src 'self'; img-src 'self' https://netflix-clone-server-iota.vercel.app; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
   );
   next();
 });
