@@ -38,22 +38,7 @@ const corsOptions = {
 // Enabling CORS for all routes
 app.use(cors(corsOptions));
 
-// Content security policy
-// app.use((req, res, next) => {
-//   res.setHeader(
-//     "Content-Security-Policy",
-//     "default-src *"
-//   );
-//   next();
-// });
-// app.use((req, res, next) => {
-//   res.setHeader(
-//     "Content-Security-Policy",
-//     "default-src 'self' https://natsudrag9.github.io/ https://netflix-clone-server-iota.vercel.app; img-src 'self' data: https://netflix-clone-server-iota.vercel.app; script-src 'self' 'unsafe-inline'"
-//   );
-//   next();
-// });
-
+// CSP
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
