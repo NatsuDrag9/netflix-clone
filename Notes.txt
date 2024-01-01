@@ -64,8 +64,16 @@ Test login credentials
 "email": "luffy14@onepiece.com",
 "password": "luffy14"
 
+"email": "luffy15@onepiece.com",
+"password": "luffy15"
+
+"email": "luffy16@onepiece.com",
+"password": "luffy16"
+
 To Do:
-1.) Login page - Display incorrect login credentials to user
-2.) Register page - Display email or password already exist to user
+1.) Login page - Display incorrect login credentials to user (DONE)
+2.) Register page - Display email or password already exist to user (DONE)
 3.) Admin page - CRUD operations
 4.) Mobile responsiveness
+5.) Fix vercel backend (DONE)
+6.) Write medium article (DONE)
