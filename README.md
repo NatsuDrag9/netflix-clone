@@ -16,4 +16,4 @@ This is a clone of Netflix app.
 * **dotenv** used to load environment variables
 ---
 
-[Medium Article]()
+[Medium Article](https://rohitimandi.medium.com/netflix-clone-405bcf59addd)
