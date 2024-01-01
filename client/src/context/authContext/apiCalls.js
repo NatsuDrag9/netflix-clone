@@ -8,8 +8,8 @@ import {
   registerSuccess,
 } from "./AuthAction";
 
-// export const apiUrl = "https://netflix-clone-server-iota.vercel.app/api"
-export const apiUrl = "http://localhost:8800/api"
+export const apiUrl = "https://netflix-clone-server-iota.vercel.app/api"
+// export const apiUrl = "http://localhost:8800/api"
 
 export const login = async (user, dispatch) => {
   dispatch(loginStart());
