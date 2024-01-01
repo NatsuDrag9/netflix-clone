@@ -58,7 +58,7 @@ router.post("/login", async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
     // Validating user and password
     if (!user || validate_password(user.password, req.body.password)) {
-      res.status(401).json("Wrong password or username");
+      res.status(401).json("Wrong username or password");
     } else {
       const accessToken = jwt.sign(
         { id: user._id, isAdmin: user.isAdmin },

@@ -9,10 +9,18 @@ function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { isFetching, dispatch } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault(); // Prevents page refresh when clicked
-    login({ email, password }, dispatch);
+
+    const result = await login({ email, password }, dispatch);
+    if (!result.success) {
+      // Set the error message received from the API
+      setErrorMessage(result.message);
+    } else {
+      setErrorMessage(""); // Clear error message on successful login
+    }
   };
 
   return (
@@ -50,16 +58,21 @@ function Login(props) {
           >
             Sign In
           </button>
-          <span>
-            New to Netflix?
-            <Link to="/register">
-              <b>Sign up now.</b>
-            </Link>
-          </span>
-          {/* <small>
-            This page is protected by Google reCAPTCHA to ensure you're not a
-            bot. <b>Learn more</b>
-          </small> */}
+          {errorMessage !== "" ? (
+            <div className="error-message">
+              {errorMessage}. {" "}
+              <Link to="/register">
+                <b>Sign up now</b>
+              </Link>
+            </div>
+          ) : (
+            <span>
+              New to Netflix?
+              <Link to="/register">
+                <b>Sign up now</b>
+              </Link>
+            </span>
+          )}
         </form>
       </div>
     </div>

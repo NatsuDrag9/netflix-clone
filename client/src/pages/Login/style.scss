@@ -37,14 +37,14 @@
     color: white;
 
     form {
-      width: 300px;
-      height: 300px;
+      width: 320px;
+      height: 320px;
       padding: 30px;
       border-radius: 5px;
       background-color: $main-color;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
 
       input {
         height: 35px;
@@ -67,6 +67,16 @@
         font-size: 16px;
         font-weight: 500;
         cursor: pointer;
+      }
+
+      .error-message {
+        width: 100%;
+        b {
+          color: white;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+
       }
 
       span {
